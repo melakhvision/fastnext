@@ -2,7 +2,7 @@ FROM node:16
 
 WORKDIR /nextbuild
 
-COPY . .
+COPY . /nextbuild
 
 RUN npm install
 
