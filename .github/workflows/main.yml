@@ -15,4 +15,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: mkdir nicetomakeitwork
+        script: |
+            whoami
+            ls -al
+            if [ -d "nicetomakeitwork" ]; then
+            echo "nicetomakeitwork does exist."
+            fi
+
