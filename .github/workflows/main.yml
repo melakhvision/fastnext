@@ -8,15 +8,24 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: executing remote ssh commands
-        uses: appleboy/ssh-action@master
+      - name: Build and publish to AZURE CR
+        # uses: appleboy/ssh-action@master
+        # with:
+        #   host: ${{ secrets.HOST }}
+        #   username: ${{ secrets.USERNAME }}
+        #   password: ${{ secrets.PASSWORD }}
+        #   port: ${{ secrets.PORT }}
+        #   script: |
+        #     if [ -d "nicetomakeitwork" ]; then
+        #     echo "nicetomakeitwork does exist."
+        #     fi
+        uses: azure/docker-login@v1
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          script: |
-            if [ -d "nicetomakeitwork" ]; then
-            echo "nicetomakeitwork does exist."
-            fi
+          login-server: nextjsthiane.azurecr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - run: |
+          docker build . -t nextjsthiane.azurecr.io/nextjsthiane:latest
+          docker push nextjsthiane.azurecr.io/nextjsthiane:latest
 
