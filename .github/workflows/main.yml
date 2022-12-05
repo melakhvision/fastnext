@@ -18,7 +18,10 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             sudo su -
-            mkdir connectio-work
-          
+            sudo apt update && sudo apt -y upgrade
+            sudo apt install nginx -y
+            systemctl enable nginx
+            systemctl start nginx
+
 
 
