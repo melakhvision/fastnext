@@ -20,8 +20,8 @@ jobs:
             sudo su -
             sudo apt update && sudo apt -y upgrade
             sudo apt install nginx -y
-            systemctl enable nginx
-            systemctl start nginx
+            sudo systemctl enable nginx
+            sudo systemctl start nginx
 
 
 
