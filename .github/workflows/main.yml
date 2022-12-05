@@ -16,7 +16,9 @@ jobs:
           #password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: mkdir connectio-work
+          script: |
+            sudo su -
+            mkdir connectio-work
           
 
 
