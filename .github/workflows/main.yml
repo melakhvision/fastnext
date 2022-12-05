@@ -8,6 +8,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Build and publish to AZURE CR
         # uses: appleboy/ssh-action@master
         # with:
