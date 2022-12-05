@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          This is amazing woww !!!!{' '}
+          This is amazing woww !!!! updated{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
