@@ -1,7 +1,7 @@
 name: connect to remote ssh command
 on:
   push:
-    branches: [ "mains" ]
+    branches: [ "main" ]
 jobs:
 
   build:
@@ -18,10 +18,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             sudo su -
-            sudo apt update && sudo apt -y upgrade
-            sudo apt install nginx -y
-            sudo systemctl enable nginx
-            sudo systemctl start nginx
+            mkdir test
 
 
 
