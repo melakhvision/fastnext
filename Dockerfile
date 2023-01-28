@@ -1,8 +1,8 @@
 FROM node:16
 
-WORKDIR /nextbuild
+WORKDIR /app
 
-COPY package.json /nextbuild
+COPY package.json /app
 
 RUN npm install
 
