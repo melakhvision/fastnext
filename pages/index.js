@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Update removed
+          Comming from the pipeline
           <code className={styles.code}>pages/index.js</code>
         </p>
 
