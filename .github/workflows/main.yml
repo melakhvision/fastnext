@@ -37,4 +37,5 @@ jobs:
           inlineScript: |
             az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
             az aks get-credentials --resource-group devtuto --name fastnextcluster
+            az aks install-cli
             kubectl rollout restart deploy
