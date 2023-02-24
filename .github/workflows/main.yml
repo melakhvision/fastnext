@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: fastnextimage.azurecr.io/fastnextimage:latest
+          tags: ${{ secrets.REGISTRY_USERNAME }}.azurecr.io/${{ secrets.REGISTRY_USERNAME }}:latest
 
   deploy:
     runs-on: ubuntu-latest
