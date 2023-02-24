@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Comming from the source updated!
+          Comming from the source updated woww this is awsome!
           <code className={styles.code}>pages/index.js</code>
         </p>
 
