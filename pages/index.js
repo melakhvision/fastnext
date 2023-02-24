@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Comming from the pipeline wow updated awsome!!!
+          Comming from the pipeline wow updated removed !
           <code className={styles.code}>pages/index.js</code>
         </p>
 
