@@ -1,7 +1,7 @@
 name: Push Docker Image To Azure Container
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "mains" ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,5 +36,5 @@ jobs:
           azcliversion: 2.30.0
           inlineScript: |
             az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-            az aks get-credentials --resource-group fastnextgrp --name fastnextcluster
+            az aks get-credentials --resource-group devtuto --name fastnextcluster
             kubectl rollout restart deploy
