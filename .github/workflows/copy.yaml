@@ -14,4 +14,4 @@ jobs:
           sudo apt-get install -y zip
           zip -r fastnext.zip .
           password=${PASSWORD}
-          sshpass -p "${PASSWORD}" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22400 fastnext.zip root@155.133.26.100:/root
+          sshpass -e "${PASSWORD}" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P 22400 fastnext.zip root@155.133.26.100:/root
