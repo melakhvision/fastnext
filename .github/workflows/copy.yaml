@@ -12,6 +12,6 @@ jobs:
         run : |
           echo ${CREDENTIALS} > credentials.json
           sudo apt-get install -y zip
-          zip -r . fastnext.zip
+          zip -r fastnext.zip .
           password=${PASSWORD}
           sshpass -p "$password" scp -P 22400 fastnext.zip $root@$155.133.26.100:/root
