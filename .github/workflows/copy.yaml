@@ -1,0 +1,16 @@
+name: Push Docker Image To Azure Container
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create json file
+      - shell: bash
+        run : |
+          echo ${CREDENTIALS} > credentials.json
+          apt-install -y zip
+          zip -r . fastnext.zip
+          password=${PASSWORD}
+          sshpass -p "$password" scp -P 22400 fastnext.zip $root@$155.133.26.100:/root
